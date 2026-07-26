@@ -140,17 +140,18 @@ void SLL::reverseList() {
     head = prev;
 }
 
-bool SLL::search(int val) {
-    Node* temp = head;
+int SLL::search(int val) {
+    int idx = 0;
 
+    Node* temp = head;
     while (temp != NULL) {
         if (temp->data == val) {
-            return true;
+            return idx;
         }
         temp = temp->next;
+        idx++;
     }
-
-    return false;
+    return -1;
 }
 
 void SLL::displayLL() {
