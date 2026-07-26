@@ -24,7 +24,7 @@ public:
     void insert(int val, int pos);
     void pop_specific(int val);
     void reverseList();
-    void search(int val);
+    int search(int val);
     void displayLL();
 };
 
