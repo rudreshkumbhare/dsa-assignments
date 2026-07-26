@@ -37,11 +37,12 @@ A modular implementation of **Singly Linked List (SLL)** and **Doubly Linked Lis
 * **Files:**
   * `SLL.h` / `SLL.cpp` (Singly Linked List interface & implementation)
   * `DLL.h` / `DLL.cpp` (Doubly Linked List interface & implementation)
-  * `main.cpp` (Driver program for testing both lists)
+  * `CLL.h` / `CLL.cpp` (Circular Linked List interface & implementation)
+  * `main.cpp` (Driver program for testing all the lists)
 
 **Compilation & Usage:** To compile and run the library with the test suite, navigate to the folder and run:
 
 ```bash
 cd linkedlist-library
-g++ SLL.cpp DLL.cpp main.cpp -o main
+g++ SLL.cpp DLL.cpp CLL.cpp main.cpp -o main
 ./main
