@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     cout << "     Testing Singly Linked List (SLL)   \n";
-    List sll;
+    SLL sll;
     sll.push_front(2);
     sll.push_front(1);
     sll.push_back(3);
