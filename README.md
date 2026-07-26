@@ -31,7 +31,7 @@ All implementations are written in standard C++. You can run any assignment usin
 
 ### 📌 Custom C++ Linked List Library
 
-A modular implementation of **Singly Linked List (SLL)** and **Doubly Linked List (DLL)** split into header and implementation files.
+A modular implementation of **Singly Linked List (SLL)**, **Doubly Linked List (DLL)** and **Circular Linked List (CLL)** split into header and implementation files.
 
 * **Location:** `/linkedlist-library`
 * **Files:**
