@@ -7,17 +7,17 @@ Node::Node(int val) {
     next = NULL;
 }
 
-List::List() {
+SLL::SLL() {
     head = tail = NULL;
 }
 
-List::~List() {
+SLL::~SLL() {
     while (head != NULL) {
         pop_front();
     }
 }
 
-void List::push_front(int val) {
+void SLL::push_front(int val) {
     Node* newNode = new Node(val);
 
     if (head == NULL) {
@@ -28,7 +28,7 @@ void List::push_front(int val) {
     }
 }
 
-void List::pop_front() {
+void SLL::pop_front() {
     if (head == NULL) return;
 
     if (head == tail) {
@@ -42,7 +42,7 @@ void List::pop_front() {
     delete temp;
 }
 
-void List::push_back(int val) {
+void SLL::push_back(int val) {
     Node* newNode = new Node(val);
 
     if (head == NULL) {
@@ -53,7 +53,7 @@ void List::push_back(int val) {
     }
 }
 
-void List::pop_back() {
+void SLL::pop_back() {
     if (head == NULL) return;
 
     if (head == tail) {
@@ -72,7 +72,7 @@ void List::pop_back() {
     tail->next = NULL;
 }
 
-void List::insert(int val, int pos) {
+void SLL::insert(int val, int pos) {
     if (pos < 1) return;
 
     if (pos == 1) {
@@ -97,7 +97,7 @@ void List::insert(int val, int pos) {
     }
 }
 
-void List::pop_specific(int val) {
+void SLL::pop_specific(int val) {
     if (head == NULL) return;
 
     if (head->data == val) {
@@ -122,7 +122,7 @@ void List::pop_specific(int val) {
     delete nodeToDelete;
 }
 
-void List::reverseList() {
+void SLL::reverseList() {
     if (head == NULL) return;
 
     tail = head;
@@ -140,7 +140,7 @@ void List::reverseList() {
     head = prev;
 }
 
-bool List::search(int val) {
+bool SLL::search(int val) {
     Node* temp = head;
 
     while (temp != NULL) {
@@ -153,7 +153,7 @@ bool List::search(int val) {
     return false;
 }
 
-void List::displayLL() {
+void SLL::displayLL() {
     if (head == NULL) {
         cout << "List is empty.\n";
         return;
