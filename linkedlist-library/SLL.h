@@ -9,13 +9,13 @@ public:
     Node(int val);
 };
 
-class List {
+class SLL {
     Node* head;
     Node* tail;
 
 public:
-    List();
-    ~List();
+    SLL();
+    ~SLL();
 
     void push_front(int val);
     void pop_front();
