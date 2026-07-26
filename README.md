@@ -35,10 +35,10 @@ A modular implementation of **Singly Linked List (SLL)** and **Doubly Linked Lis
 
 * **Location:** `/linkedlist-library`
 * **Files:**
-  * [`SLL.h`](SLL.h) / [`SLL.cpp`](SLL.cpp) (Singly Linked List interface & implementation)
-  * [`DLL.h`](SLL.h) / [`DLL.cpp`](SLL.cpp) (Doubly Linked List interface & implementation)
-  * [`CLL.h`](SLL.h) / [`CLL.cpp`](SLL.cpp) (Circular Linked List interface & implementation)
-  * [`main.cpp`](main.cpp) (Driver program for testing all the lists)
+  * [`SLL.h`](linkedlist-library/SLL.h) / [`SLL.cpp`](linkedlist-library/SLL.cpp) (Singly Linked List interface & implementation)
+  * [`DLL.h`](linkedlist-library/DLL.h) / [`DLL.cpp`](linkedlist-library/DLL.cpp) (Doubly Linked List interface & implementation)
+  * [`CLL.h`](linkedlist-library/CLL.h) / [`CLL.cpp`](linkedlist-library/CLL.cpp) (Circular Linked List interface & implementation)
+  * [`main.cpp`](linkedlist-library/main.cpp) (Driver program for testing all the lists)
 
 **Compilation & Usage:** To compile and run the library with the test suite, navigate to the folder and run:
 
