@@ -1,17 +1,17 @@
 #ifndef CLL_H
 #define CLL_H
 
-class Node {
+class CLLNode {
 public:
     int data;
-    Node* next;
+    CLLNode* next;
 
     Node(int val);
 };
 
 class CLL {
-    Node* head;
-    Node* tail;
+    CLLNode* head;
+    CLLNode* tail;
 
 public:
     CLL();
