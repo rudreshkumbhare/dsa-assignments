@@ -2,7 +2,7 @@
 #include "SLL.h"
 using namespace std;
 
-Node::Node(int val) {
+SLLNode::SLLNode(int val) {
     data = val;
     next = NULL;
 }
@@ -18,7 +18,7 @@ SLL::~SLL() {
 }
 
 void SLL::push_front(int val) {
-    Node* newNode = new Node(val);
+    SLLNode* newNode = new SLLNode(val);
 
     if (head == NULL) {
         head = tail = newNode;
@@ -37,13 +37,13 @@ void SLL::pop_front() {
         return;
     }
 
-    Node* temp = head;
+    SLLNode* temp = head;
     head = head->next;
     delete temp;
 }
 
 void SLL::push_back(int val) {
-    Node* newNode = new Node(val);
+    SLLNode* newNode = new SLLNode(val);
 
     if (head == NULL) {
         head = tail = newNode;
@@ -62,7 +62,7 @@ void SLL::pop_back() {
         return;
     }
 
-    Node* temp = head;
+    SLLNode* temp = head;
     while (temp->next != tail) {
         temp = temp->next;
     }
@@ -80,7 +80,8 @@ void SLL::insert(int val, int pos) {
         return;
     }
 
-    Node* temp = head;
+    SLLNode* temp = head;
+
     for (int i = 0; i < pos - 2; i++) {
         if (temp == NULL) break;
         temp = temp->next;
@@ -88,7 +89,7 @@ void SLL::insert(int val, int pos) {
 
     if (temp == NULL) return;
 
-    Node* newNode = new Node(val);
+    SLLNode* newNode = new SLLNode(val);
     newNode->next = temp->next;
     temp->next = newNode;
 
@@ -105,7 +106,8 @@ void SLL::pop_specific(int val) {
         return;
     }
 
-    Node* temp = head;
+    SLLNode* temp = head;
+
     while (temp->next != NULL && temp->next->data != val) {
         temp = temp->next;
     }
@@ -117,7 +119,7 @@ void SLL::pop_specific(int val) {
         return;
     }
 
-    Node* nodeToDelete = temp->next;
+    SLLNode* nodeToDelete = temp->next;
     temp->next = nodeToDelete->next;
     delete nodeToDelete;
 }
@@ -126,10 +128,10 @@ void SLL::reverseList() {
     if (head == NULL) return;
 
     tail = head;
-    
-    Node* prev = NULL;
-    Node* curr = head;
-    Node* next = NULL;
+
+    SLLNode* prev = NULL;
+    SLLNode* curr = head;
+    SLLNode* next = NULL;
 
     while (curr != NULL) {
         next = curr->next;
@@ -137,20 +139,24 @@ void SLL::reverseList() {
         prev = curr;
         curr = next;
     }
+
     head = prev;
 }
 
 int SLL::search(int val) {
     int idx = 0;
 
-    Node* temp = head;
+    SLLNode* temp = head;
+
     while (temp != NULL) {
         if (temp->data == val) {
             return idx;
         }
+
         temp = temp->next;
         idx++;
     }
+
     return -1;
 }
 
@@ -160,10 +166,12 @@ void SLL::displayLL() {
         return;
     }
 
-    Node* temp = head;
+    SLLNode* temp = head;
+
     while (temp != NULL) {
         cout << temp->data << " -> ";
         temp = temp->next;
     }
+
     cout << "NULL\n";
 }
