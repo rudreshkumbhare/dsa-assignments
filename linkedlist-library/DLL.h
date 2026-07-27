@@ -1,18 +1,16 @@
-#ifndef DLL_H
-#define DLL_H
-
-class Node {
+class DLLNode {
 public:
     int data;
-    Node* next;
-    Node* prev;
+    DLLNode* next;
+    DLLNode* prev;
 
-    Node(int val);
+    DLLNode(int val);
 };
 
 class DLL {
-    Node* head;
-    Node* tail;
+private:
+    DLLNode* head;
+    DLLNode* tail;
 
 public:
     DLL();
@@ -26,5 +24,3 @@ public:
     void pop_specific(int val);
     void displayDLL();
 };
-
-#endif
