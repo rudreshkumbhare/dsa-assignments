@@ -2,7 +2,7 @@
 #include "CLL.h"
 using namespace std;
 
-Node::Node(int val) {
+CLLNode::CLLNode(int val) {
     data = val;
     next = NULL;
 }
@@ -18,7 +18,7 @@ CLL::~CLL() {
 }
 
 void CLL::insertAtHead(int val) {
-    Node* newNode = new Node(val);
+    CLLNode* newNode = new CLLNode(val);
     if (head == NULL) {
         head = tail = newNode;
         tail->next = head;
@@ -30,7 +30,7 @@ void CLL::insertAtHead(int val) {
 }
 
 void CLL::insertAtTail(int val) {
-    Node* newNode = new Node(val);
+    CLLNode* newNode = new CLLNode(val);
     if (head == NULL) {
         head = tail = newNode;
         tail->next = head;
@@ -53,7 +53,7 @@ void CLL::deleteAtHead() {
         return;
     }
 
-    Node* temp = head;
+    CLLNode* temp = head;
     head = head->next;
     tail->next = head;
     delete temp;
@@ -71,7 +71,7 @@ void CLL::deleteAtTail() {
         return;
     }
 
-    Node* temp = head;
+    CLLNode* temp = head;
     while (temp->next != tail) {
         temp = temp->next;
     }
@@ -91,7 +91,7 @@ void CLL::insert(int val, int pos) {
 
     if (head == NULL) return;
 
-    Node* temp = head;
+    CLLNode* temp = head;
     for (int i = 0; i < pos - 2; i++) {
         temp = temp->next;
         if (temp == head) return;
@@ -102,7 +102,7 @@ void CLL::insert(int val, int pos) {
         return;
     }
 
-    Node* newNode = new Node(val);
+    CLLNode* newNode = new CLLNode(val);
     newNode->next = temp->next;
     temp->next = newNode;
 }
@@ -115,7 +115,7 @@ void CLL::deleteSpecific(int val) {
         return;
     }
 
-    Node* temp = head;
+    CLLNode* temp = head;
     while (temp->next != head && temp->next->data != val) {
         temp = temp->next;
     }
@@ -127,7 +127,7 @@ void CLL::deleteSpecific(int val) {
         return;
     }
 
-    Node* nodeToDelete = temp->next;
+    CLLNode* nodeToDelete = temp->next;
     temp->next = nodeToDelete->next;
     delete nodeToDelete;
 }
@@ -135,7 +135,7 @@ void CLL::deleteSpecific(int val) {
 int CLL::search(int val) {
     if (head == NULL) return -1;
 
-    Node* temp = head;
+    CLLNode* temp = head;
     int idx = 0;
 
     do {
@@ -155,10 +155,11 @@ void CLL::displayCLL() {
         return;
     }
 
-    Node* temp = head;
+    CLLNode* temp = head;
     do {
         cout << temp->data << " -> ";
         temp = temp->next;
     } while (temp != head);
-    cout << "(head: " << head->data << ")\n";    
+
+    cout << "(head: " << head->data << ")\n";
 }
