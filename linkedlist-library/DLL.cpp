@@ -2,7 +2,7 @@
 #include "DLL.h"
 using namespace std;
 
-Node::Node(int val) {
+DLLNode::DLLNode(int val) {
     data = val;
     next = prev = NULL;
 }
@@ -18,7 +18,7 @@ DLL::~DLL() {
 }
 
 void DLL::push_front(int val) {
-    Node* newNode = new Node(val);
+    DLLNode* newNode = new DLLNode(val);
 
     if (head == NULL) {
         head = tail = newNode;
@@ -30,7 +30,7 @@ void DLL::push_front(int val) {
 }
 
 void DLL::push_back(int val) {
-    Node* newNode = new Node(val);
+    DLLNode* newNode = new DLLNode(val);
 
     if (head == NULL) {
         head = tail = newNode;
@@ -49,14 +49,14 @@ void DLL::insert(int val, int key) {
         return;
     }
 
-    Node* temp = head;
+    DLLNode* temp = head;
     while (temp != NULL && temp->data != key) {
         temp = temp->next;
     }
 
     if (temp == NULL) return;
 
-    Node* newNode = new Node(val);
+    DLLNode* newNode = new DLLNode(val);
     newNode->next = temp;
     newNode->prev = temp->prev;
     
@@ -67,7 +67,8 @@ void DLL::insert(int val, int key) {
 void DLL::pop_front() {
     if (head == NULL) return;
 
-    Node* temp = head;
+    DLLNode* temp = head;
+
     if (head == tail) {
         head = tail = NULL;
     } else {
@@ -81,7 +82,8 @@ void DLL::pop_front() {
 void DLL::pop_back() {
     if (head == NULL) return;
 
-    Node* temp = tail;
+    DLLNode* temp = tail;
+
     if (head == tail) {                       
         head = tail = NULL;                     
     } else {
@@ -105,7 +107,8 @@ void DLL::pop_specific(int val) {
         return;
     }
 
-    Node* temp = head;
+    DLLNode* temp = head;
+
     while (temp != NULL && temp->data != val) {
         temp = temp->next;
     }
@@ -114,6 +117,7 @@ void DLL::pop_specific(int val) {
 
     temp->prev->next = temp->next;
     temp->next->prev = temp->prev;
+
     delete temp;
 }
 
@@ -123,10 +127,12 @@ void DLL::displayDLL() {
         return;
     }
 
-    Node* temp = head;
+    DLLNode* temp = head;
+
     while (temp != NULL) {
         cout << temp->data << " <=> ";
         temp = temp->next;
     }
+
     cout << "NULL\n";
 }
