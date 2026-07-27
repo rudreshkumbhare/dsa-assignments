@@ -6,7 +6,7 @@ public:
     int data;
     CLLNode* next;
 
-    Node(int val);
+    CLLNode(int val);
 };
 
 class CLL {
