@@ -1,17 +1,17 @@
-#ifndef SLL_H
-#define SLL_H
+#pragma once
 
-class Node {
+class SLLNode {
 public:
     int data;
-    Node* next;
+    SLLNode* next;
 
-    Node(int val);
+    SLLNode(int val);
 };
 
 class SLL {
-    Node* head;
-    Node* tail;
+private:
+    SLLNode* head;
+    SLLNode* tail;
 
 public:
     SLL();
@@ -27,5 +27,3 @@ public:
     int search(int val);
     void displayLL();
 };
-
-#endif
