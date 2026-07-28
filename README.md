@@ -1,6 +1,21 @@
-# Data Structures & Algorithms Assignments
+# Data Structures & Algorithms in C++
 
-This repository contains college course assignments and personal C++ implementations for Data Structures & Algorithms.
+A collection of my Data Structures & Algorithms implementations in C++ — from college course assignments to reusable data structure libraries.
+
+Built while learning core CS concepts like linked lists, memory management, modular programming, file handling, and problem solving.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** C++
+- **Concepts Covered:**
+  - Data Structures
+  - Object-Oriented Programming
+  - Dynamic Memory Allocation
+  - File Handling
+  - Modular Programming
+  - Problem Solving
 
 ---
 
@@ -19,30 +34,48 @@ This repository contains college course assignments and personal C++ implementat
 All implementations are written in standard C++. You can run any assignment using a terminal and a C++ compiler (like `g++`):
 
 1. **Compile:**
-   ```bash
-   g++ assignmentName.cpp -o assignmentName
+
+```bash
+g++ assignmentName.cpp -o assignmentName
+```
+
 2. **Run:**
-   ```bash
-   ./assignmentName
+
+```bash
+./assignmentName
+```
 
 ---
 
-## 🛠️ Personal Projects & Custom Libraries
+# ⭐ Personal Projects & Custom Libraries
 
-### 📌 Custom C++ Linked List Library
+## 📌 Custom C++ Linked List Library
 
 A modular implementation of **Singly Linked List (SLL)**, **Doubly Linked List (DLL)** and **Circular Linked List (CLL)** split into header and implementation files.
 
+This project was built to practice reusable code, modular programming, and understanding the internal working of linked list data structures.
+
 * **Location:** `/linkedlist-library`
+
 * **Files:**
   * [`SLL.h`](linkedlist-library/SLL.h) / [`SLL.cpp`](linkedlist-library/SLL.cpp) (Singly Linked List interface & implementation)
   * [`DLL.h`](linkedlist-library/DLL.h) / [`DLL.cpp`](linkedlist-library/DLL.cpp) (Doubly Linked List interface & implementation)
   * [`CLL.h`](linkedlist-library/CLL.h) / [`CLL.cpp`](linkedlist-library/CLL.cpp) (Circular Linked List interface & implementation)
   * [`main.cpp`](linkedlist-library/main.cpp) (Driver program for testing all the lists)
 
-**Compilation & Usage:** To compile and run the library with the test suite, navigate to the folder and run:
+**Compilation & Usage:**
+
+To compile and run the library with the test suite, navigate to the folder and run:
 
 ```bash
 cd linkedlist-library
 g++ SLL.cpp DLL.cpp CLL.cpp main.cpp -o main
 ./main
+```
+
+---
+
+## 🚀 Future Additions
+
+- More Data Structures implementations
+- Additional C++ projects
