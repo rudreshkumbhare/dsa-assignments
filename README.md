@@ -25,7 +25,8 @@ Built while learning core CS concepts like linked lists, memory management, modu
 | :--- | :--- | :--- | :--- |
 | **Assignment 1** | Singly Linked List | Playlist Maker app with add, play, and deletion. | [`assignment1.cpp`](assignment1.cpp) |
 | **Assignment 2** | Doubly Linked List | Text Editor with insert, delete, reverse and file persistent storage. | [`assignment2.cpp`](assignment2.cpp) |
-| **Assignment 3** | Coming Soon | Description of next assignment | *Pending* |
+| **Assignment 3** | Browser History using Stack | Browser History with features of tab addition and navigation. | [`assignment3.cpp`](assignment3.cpp) |
+| **Assignment 4** | Infix to Prefix & Postfix Conversion and Evaluation | Conversion of Infix to Prefix & Postfix and evaluation of these expressions. | [`assignment4.cpp`](assignment4.cpp) |
 
 ---
 
