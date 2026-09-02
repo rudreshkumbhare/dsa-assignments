@@ -6,30 +6,35 @@ const int MAX = 100;
 
 class CirclularQueue {
     int front, rear;
+
 public:
-    int a[MAX];
+    string a[MAX];
+
     CirclularQueue() {
         front = -1;
         rear = -1;
     }
 
-    void enqueue(int x) {
+    void enqueue(string x) {
         if ((rear + 1) % MAX == front) {
             cout << "Queue is full.\n";
             return;
         }
+
         if (front == -1) front = 0;
+        
         rear = (rear + 1) % MAX;
         a[rear] = x;
-        cout << "Customer arrived\n";
+        cout << "Customer arrived.\n";
     }
-    
+
     void dequeue() {
         if (front == -1) {
             cout << "Queue is empty.\n";
             return;
         }
-        cout << "Customer served\n";
+
+        cout << a[front] << " is served.\n";
         if (front == rear) {
             front = -1;
             rear = -1;
@@ -43,14 +48,37 @@ public:
             cout << "Queue is empty.\n";
             return;
         }
-        cout << "Customers in queue: \n";
+
+        cout << "Customers in queue:\n";
         int i = front;
         while (true) {
-            cout << "Customer " << i+1 << ": " << a[i] << endl;
-            if (i == rear) break;
+            cout << "Customer " << i + 1 << ": " << a[i] << endl;
+            if (i == rear)
+                break;
             i = (i + 1) % MAX;
         }
         cout << endl;
+    }
+
+    void closeCounter() {
+        if (front == -1) {
+            cout << "No customers waiting.\n";
+            cout << "Checkout counter closed.\n";
+            return;
+        }
+
+        cout << "\nServing remaining customers...\n";
+        while (front != -1) {
+            cout << a[front] << " is served.\n";
+            if (front == rear) {
+                front = -1;
+                rear = -1;
+            } else {
+                front = (front + 1) % MAX;
+            }
+        }
+        cout << "All customers have been served.\n";
+        cout << "Checkout counter closed.\n";
     }
 
     bool isFull() {
@@ -65,7 +93,7 @@ public:
 int main() {
     CirclularQueue q;
     int choice = 0;
-    int customerID = 1;
+    string customerName;
 
     do {
         cout << "\n—————————— Supermarket Checkout System ——————————\n";
@@ -73,15 +101,18 @@ int main() {
         cout << "2. Customer Checkout\n";
         cout << "3. View Customers in Queue\n";
         cout << "4. Close Checkout Counter\n";
-        cout << "Enter your choice: ";
+        cout << "5. Exit\n";
+        cout << "\nEnter your choice: ";
         cin >> choice;
 
         switch (choice) {
             case 1:
                 if (!q.isFull()) {
-                    q.enqueue(customerID);
-                    customerID++;
-                } else {
+                    cout << "Enter customer name: ";
+                    cin >> customerName;
+                    q.enqueue(customerName);
+                }
+                else {
                     cout << "Queue is full! Cannot add more customers.\n";
                 }
                 break;
@@ -92,12 +123,14 @@ int main() {
                 q.display();
                 break;
             case 4:
-                cout << "Closing checkout counter. Exiting...\n";
+                q.closeCounter();
+                break;
+            case 5:
+                cout << "Exiting program...\n";
                 break;
             default:
                 cout << "Invalid choice. Please try again.\n";
         }
-    } while (choice != 4);
-
+    } while (choice != 5);
     return 0;
 }
