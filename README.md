@@ -29,6 +29,8 @@ Built while learning core CS concepts like linked lists, memory management, modu
 | **Assignment 4** | Infix to Prefix & Postfix Conversion and Evaluation | Conversion of Infix to Prefix & Postfix and evaluation of these expressions. | [`assignment4.cpp`](assignment4.cpp) |
 | **Assignment 5** | Queue | Restaurant waitlist system with add party, seat party and display waitlist. | [`assignment5.cpp`](assignment5.cpp) |
 | **Assignment 6** | Circular Queue | Customer checkout system with customer arrival and checkout, close checkout counter and view customer. | [`assignment6.cpp`](assignment6.cpp) |
+| **Assignment 7** | BST | Dictionary system with insertion, deletion, search, mirroring, copying, level-wise display, and path-sum checking.. | [`assignment7.cpp`](assignment7.cpp) |
+| **Assignment 8** | TBST | Library book indexing system with book insertion, ID-based search, and inorder traversal using threads. | [`assignment8.cpp`](assignment8.cpp) |
 
 ---
 
