@@ -71,21 +71,17 @@ public:
             int v = s.top();
             s.pop();
 
-            if (v == goal) {
-                break;
-            }
+            if (v == goal) break;
 
             Node *temp = adjlist[v];
 
             while (temp != NULL) {
                 int i = temp->vertex;
-
                 if (!visited[i]) {
                     visited[i] = 1;
                     parent[i] = v;
                     s.push(i);
                 }
-
                 temp = temp->next;
             }
         }
@@ -109,8 +105,7 @@ public:
         for (int i = count - 1; i >= 0; i--) {
             cout << path[i] << " ";
         }
-
-        cout << "\n";
+        cout << endl;
     }
 
     void BFS(int start, int goal) {
@@ -135,13 +130,11 @@ public:
 
             while (temp != NULL) {
                 int i = temp->vertex;
-
                 if (!visited[i]) {
                     visited[i] = 1;
                     parent[i] = v;
                     q.push(i);
                 }
-
                 temp = temp->next;
             }
         }
@@ -165,8 +158,7 @@ public:
         for (int i = count - 1; i >= 0; i--) {
             cout << path[i] << " ";
         }
-
-        cout << "\n";
+        cout << endl;
     }
 };
 
@@ -188,7 +180,7 @@ int main() {
         for (int j = 0; j < COLS; j++) {
             cout << maze[i][j] << " ";
         }
-        cout << "\n";
+        cout << endl;
     }
 
     Graph g(ROWS * COLS);
