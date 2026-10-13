@@ -31,6 +31,7 @@ Built while learning core CS concepts like linked lists, memory management, modu
 | **Assignment 6** | Circular Queue | Customer checkout system with customer arrival and checkout, close checkout counter and view customer. | [`assignment6.cpp`](assignment6.cpp) |
 | **Assignment 7** | BST | Dictionary system with insertion, deletion, search, mirroring, copying, level-wise display, and path-sum checking.. | [`assignment7.cpp`](assignment7.cpp) |
 | **Assignment 8** | TBST | Library book indexing system with book insertion, ID-based search, and inorder traversal using threads. | [`assignment8.cpp`](assignment8.cpp) |
+| **Assignment 9** | Graph | Maze-solving system using DFS and BFS to find paths from the starting point to the goal while avoiding blocked cells. | [`assignment9.cpp`](assignment9.cpp) |
 
 ---
 
