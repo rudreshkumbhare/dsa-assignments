@@ -39,6 +39,39 @@ public:
         adjlist[dest] = second;
     }
 
+    void createGraph(char maze[][4], int rows, int cols) {
+        int rowmove[4] = {-1, 1, 0, 0};
+        int colmove[4] = {0, 0, -1, 1};
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (maze[i][j] == '#') {
+                    continue;
+                }
+
+                int src = i * cols + j;
+
+                for (int k = 0; k < 4; k++) {
+                    int nr = i + rowmove[k];
+                    int nc = j + colmove[k];
+
+                    if (nr >= 0 && nr < rows &&
+                        nc >= 0 && nc < cols &&
+                        maze[nr][nc] != '#') {
+
+                        int dest = nr * cols + nc;
+
+                        if (src < dest) {
+                            addedge(src, dest);
+                        }
+                    }
+                }
+            }
+        }
+
+        cout << "\nGraph created successfully.\n";
+    }
+
     void display() {
         cout << "\nAdjacency List:\n";
 
@@ -71,17 +104,21 @@ public:
             int v = s.top();
             s.pop();
 
-            if (v == goal) break;
+            if (v == goal) {
+                break;
+            }
 
             Node *temp = adjlist[v];
 
             while (temp != NULL) {
                 int i = temp->vertex;
+
                 if (!visited[i]) {
                     visited[i] = 1;
                     parent[i] = v;
                     s.push(i);
                 }
+
                 temp = temp->next;
             }
         }
@@ -105,7 +142,8 @@ public:
         for (int i = count - 1; i >= 0; i--) {
             cout << path[i] << " ";
         }
-        cout << endl;
+
+        cout << "\n";
     }
 
     void BFS(int start, int goal) {
@@ -130,11 +168,13 @@ public:
 
             while (temp != NULL) {
                 int i = temp->vertex;
+
                 if (!visited[i]) {
                     visited[i] = 1;
                     parent[i] = v;
                     q.push(i);
                 }
+
                 temp = temp->next;
             }
         }
@@ -158,7 +198,8 @@ public:
         for (int i = count - 1; i >= 0; i--) {
             cout << path[i] << " ";
         }
-        cout << endl;
+
+        cout << "\n";
     }
 };
 
@@ -166,7 +207,6 @@ int main() {
     const int ROWS = 4;
     const int COLS = 4;
 
-    // change the maze configuration as needed
     char maze[ROWS][COLS] = {
         {'S', '.', '.', '.'},
         {'.', '#', '#', '.'},
@@ -180,44 +220,16 @@ int main() {
         for (int j = 0; j < COLS; j++) {
             cout << maze[i][j] << " ";
         }
-        cout << endl;
+        cout << "\n";
     }
 
     Graph g(ROWS * COLS);
 
+    g.createGraph(maze, ROWS, COLS);
+    g.display();
+
     int start = 0;
     int goal = ROWS * COLS - 1;
-
-    int rowmove[4] = {-1, 1, 0, 0};
-    int colmove[4] = {0, 0, -1, 1};
-
-    for (int i = 0; i < ROWS; i++) {
-        for (int j = 0; j < COLS; j++) {
-            if (maze[i][j] == '#') {
-                continue;
-            }
-
-            int src = i * COLS + j;
-
-            for (int k = 0; k < 4; k++) {
-                int nr = i + rowmove[k];
-                int nc = j + colmove[k];
-
-                if (nr >= 0 && nr < ROWS &&
-                    nc >= 0 && nc < COLS &&
-                    maze[nr][nc] != '#') {
-
-                    int dest = nr * COLS + nc;
-
-                    if (src < dest) {
-                        g.addedge(src, dest);
-                    }
-                }
-            }
-        }
-    }
-
-    g.display();
 
     cout << "\nStart: " << start;
     cout << "\nGoal: " << goal << endl;
