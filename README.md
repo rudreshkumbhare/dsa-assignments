@@ -147,8 +147,3 @@ g++ SLL.cpp DLL.cpp CLL.cpp main.cpp -o main
 ```
 
 ---
-
-## 🚀 Future Additions
-
-- More Data Structures implementations
-- Additional C++ projects
