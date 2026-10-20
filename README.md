@@ -21,19 +21,84 @@ Built while learning core CS concepts like linked lists, memory management, modu
 
 ## 📊 Course Assignments
 
-| Assignment | Topic | Description | Files |
-| :--- | :--- | :--- | :--- |
-| **Assignment 1** | Singly Linked List | Playlist Maker app with add, play, and deletion. | [`assignment1.cpp`](assignment1.cpp) |
-| **Assignment 2** | Doubly Linked List | Text Editor with insert, delete, reverse and file persistent storage. | [`assignment2.cpp`](assignment2.cpp) |
-| **Assignment 3** | Browser History using Stack | Browser History with tab addition and navigation. | [`assignment3.cpp`](assignment3.cpp) |
-| **Assignment 4** | Infix to Prefix & Postfix Conversion and Evaluation | Conversion of Infix to Prefix & Postfix and evaluation of these expressions. | [`assignment4.cpp`](assignment4.cpp) |
-| **Assignment 5** | Queue | Restaurant waitlist system with add party, seat party and display waitlist. | [`assignment5.cpp`](assignment5.cpp) |
-| **Assignment 6** | Circular Queue | Customer checkout system with customer arrival and checkout, close checkout counter and view customer. | [`assignment6.cpp`](assignment6.cpp) |
-| **Assignment 7** | BST | Dictionary system with insertion, deletion, search, mirroring, copying, level-wise display, and path-sum checking.. | [`assignment7.cpp`](assignment7.cpp) |
-| **Assignment 8** | TBST | Library book indexing system with book insertion, ID-based search, and inorder traversal using threads. | [`assignment8.cpp`](assignment8.cpp) |
-| **Assignment 9** | Graph | Maze-solving system using DFS and BFS to find paths from the starting point to the goal while avoiding blocked cells. | [`assignment9.cpp`](assignment9.cpp) |
-| **Assignment 10** | Graph | College campus network using Prim’s algorithm to connect departments with minimum total distance. | [`assignment10.cpp`](assignment10.cpp) |
-| **Assignment 11** | Graph | Supply chain network using Dijkstra’s algorithm to find the shortest transportation routes between locations. | [`assignment11.cpp`](assignment11.cpp) |
+<table>
+  <thead>
+    <tr>
+      <th width="16%">Assignment</th>
+      <th width="22%">Topic</th>
+      <th width="44%">Description</th>
+      <th width="18%">Files</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Assignment 1</strong></td>
+      <td>Singly Linked List</td>
+      <td>Playlist Maker app with add, play, and deletion.</td>
+      <td><a href="assignment1.cpp"><code>assignment1.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 2</strong></td>
+      <td>Doubly Linked List</td>
+      <td>Text Editor with insert, delete, reverse and file persistent storage.</td>
+      <td><a href="assignment2.cpp"><code>assignment2.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 3</strong></td>
+      <td>Browser History using Stack</td>
+      <td>Browser History with tab addition and navigation.</td>
+      <td><a href="assignment3.cpp"><code>assignment3.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 4</strong></td>
+      <td>Infix to Prefix &amp; Postfix Conversion and Evaluation</td>
+      <td>Conversion of Infix to Prefix &amp; Postfix and evaluation of these expressions.</td>
+      <td><a href="assignment4.cpp"><code>assignment4.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 5</strong></td>
+      <td>Queue</td>
+      <td>Restaurant waitlist system with add party, seat party and display waitlist.</td>
+      <td><a href="assignment5.cpp"><code>assignment5.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 6</strong></td>
+      <td>Circular Queue</td>
+      <td>Customer checkout system with customer arrival and checkout, close checkout counter and view customer.</td>
+      <td><a href="assignment6.cpp"><code>assignment6.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 7</strong></td>
+      <td>BST</td>
+      <td>Dictionary system with insertion, deletion, search, mirroring, copying, level-wise display, and path-sum checking.</td>
+      <td><a href="assignment7.cpp"><code>assignment7.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 8</strong></td>
+      <td>TBST</td>
+      <td>Library book indexing system with book insertion, ID-based search, and inorder traversal using threads.</td>
+      <td><a href="assignment8.cpp"><code>assignment8.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 9</strong></td>
+      <td>Graph</td>
+      <td>Maze-solving system using DFS and BFS to find paths from the starting point to the goal while avoiding blocked cells.</td>
+      <td><a href="assignment9.cpp"><code>assignment9.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 10</strong></td>
+      <td>Graph</td>
+      <td>College campus network using Prim’s algorithm to connect departments with minimum total distance.</td>
+      <td><a href="assignment10.cpp"><code>assignment10.cpp</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Assignment 11</strong></td>
+      <td>Graph</td>
+      <td>Supply chain network using Dijkstra’s algorithm to find the shortest transportation routes between locations.</td>
+      <td><a href="assignment11.cpp"><code>assignment11.cpp</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
